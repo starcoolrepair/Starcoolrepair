@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-primary: #024194;
+    --brand-primary-hover: #013174;
+    --brand-accent: #0088E0;
+    --brand-navy: #071E3D;
+    --brand-ice: #F0F6FF;
+    --brand-dark: #0F172A;
+    --whatsapp-green: #25D366;
+    --whatsapp-hover: #1EBE5D;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #1E293B;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  /* Accessibility focus ring */
+  *:focus-visible {
+    outline: 2px solid #0088E0;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom button classes to guarantee distinct, high-conversion visual design */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #024194;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px 0 rgba(2, 65, 148, 0.25);
+  border: 1px solid transparent;
+}
+.btn-primary:hover {
+  background-color: #013174;
+  box-shadow: 0 6px 20px 0 rgba(2, 65, 148, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #0F172A;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 12px 0 rgba(15, 23, 42, 0.2);
+}
+.btn-call:hover {
+  background-color: #1E293B;
+  border-color: #475569;
+  transform: translateY(-1px);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px 0 rgba(37, 211, 102, 0.3);
+  border: 1px solid #1EBE5D;
+}
+.btn-whatsapp:hover {
+  background-color: #1EBE5D;
+  box-shadow: 0 6px 20px 0 rgba(37, 211, 102, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Subtle soft animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
